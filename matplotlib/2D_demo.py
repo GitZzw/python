@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from matplotlib import pyplot as plt  # 用来绘制图形
-
+plt.figure(figsize=(20, 10))
 plt.ion()
 for point_i in range(1, n_plot_points):
     # for agent_i in range(2):
@@ -37,7 +37,7 @@ for point_i in range(1, n_plot_points):
     title4 = 'Dyna2'
     titles = [title1, title4]
     for i in range(2):
-        plt.subplot(121+i,figsize=(20, 10))
+        plt.subplot(121+i)
         plt.plot(xaxis, benchmark_data[i])
         plt.xlabel('Training episodes')
         plt.ylabel('Average reward per episode')
